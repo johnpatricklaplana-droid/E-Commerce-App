@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-.list-test-decoration-hover {
+.list-text-decoration-hover {
     @apply hover:underline hover:text-blue-500
 }
