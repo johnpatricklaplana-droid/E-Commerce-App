@@ -18,23 +18,31 @@
         <li class="hidden sm:block sm:text-sm  list-text-decoration-hover"><a href="#">Contact</a></li>
         <li class="hidden sm:block sm:text-sm  list-text-decoration-hover"><a href="#">FAQ</a></li>
       </ul>
-      <button class="bg-green-600 text-white px-2 py-3 sm:px-6 sm:py-3 font-bold rounded-2xl w-28 flex 
-      text-center justify-center hover:bg-green-700">Sign up</button>
+      <div class="flex gap-1 relative">
+        <button class="bg-green-500 text-sm text-nowrap text-white px-2 py-3 sm:px-6 sm:py-2 w-24 font-bold rounded-2xl flex 
+              text-center justify-center hover:bg-green-600">Sign up</button>
+        <button id="loginButton" class="bg-green-500 text-sm text-nowrap text-white px-2 py-3 sm:px-6 sm:py-2 w-24 font-bold rounded-2xl flex 
+              text-center justify-center hover:bg-green-600">Login</button>
+        <div id="loginChoicePopup" class="absolute gap-1.5 flex-col bg-white sm:px-2 rounded-2xl right-0 sm:p-2.5 mt-auto hidden">
+          <a href="seller-login-page.html" class="sm:py-2 sm:px-2 hover:bg-blue-100 rounded-2xl text-2xl text-nowrap">Login as seller</a>
+          <a href="costumer-login-page.html" class="sm:py-2 sm:px-2 hover:bg-blue-100 rounded-2xl text-2xl text-nowrap">Login as costumer</a>
+        </div>
+      </div>
     </nav>
 
     <main class="bg-[url('/hero_background.png')] bg-cover min-h-screen w-full
-    flex items-center justify-center px-1 sm:px-10 sm:py-10">
+    flex items-center justify-center px-6 sm:px-10 sm:py-10">
       
       <div class="sm:backdrop-blur-2xl w-full sm:w-auto flex gap-3 rounded-2xl lg:px-24 lg:py-24 sm:px-6 sm:py-6 items-center">
         <div class="rounded-2xl flex items-center flex-col gap-2">
           <h1 class="text-green-600 drop-shadow-lg text-2xl font-bold text-center sm:text-2xl md:text-4xl lg:text-5xl">Discover products instantly, save favorites, track orders in real-time, and checkout in seconds — all in one powerful
           app.</h1>
           <p class="text-center text-sm">Find what you need in seconds, enjoy seamless checkout, and track every order effortlessly.</p>
-          <button class= "md:px-4 md:py-2 md:text-lg bg-orange-500 hover:bg-orange-700 text-white px-6 rounded-2xl py-3 border-2 border-white">Shop now</button>
+          <span class= "md:px-4 md:py-2 md:text-lg bg-orange-500 hover:bg-orange-700 text-white px-6 rounded-2xl py-3 border-2 border-white"><a href="costumer-login-page.html">Shop now</a></span>
           <div class="">
-            <span class="text-green-800 text-sm">✅ Free Shipping</span>
-            <span class="text-red-400 text-sm">🔒 Secure Payment</span>
-            <span class="text-blue-700 text-sm">⚡Fast Delivery</span>
+            <span class="text-sm">✅ Free Shipping</span>
+            <span class="text-sm">🔒 Secure Payment</span>
+            <span class="text-sm">⚡Fast Delivery</span>
           </div>
         </div>
       </div>
@@ -71,5 +79,6 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/landing-page.js"></script>
   </body>
 </html>
