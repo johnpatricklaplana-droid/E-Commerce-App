@@ -8,12 +8,13 @@
 
     loginButton.addEventListener("click", () => {
         if(!isOpen) {
-            logInPopup.classList.remove("hidden");
-            logInPopup.classList.add("flex");
+            logInPopup.classList.remove("opacity-0");
+            logInPopup.classList.add("opacity-100");
             isOpen = true;
             return;
         }
-        logInPopup.classList.add("hidden");
+        logInPopup.classList.remove("opacity-100");
+        logInPopup.classList.add("opacity-0");
         isOpen = false;
     });
 
