@@ -6,8 +6,8 @@
     <title>Add Business Registration</title>
 </head>
 <body>
-    <div class="h-screen w-screen flex items-center justify-center">
-        <div class="flex flex-col">
+    <div class="h-screen bg-blue-100 w-screen flex items-center justify-center">
+        <div class="flex gap-5 h-150 justify-center items-center py-5 sm:bg-white px-8 rounded sm:shadow-2xl flex-col">
             <svg width="200" height="200" viewBox="0 0 150 200">
                 <circle cx="90" fill="aliceblue" cy="130" r="100" />
 
@@ -29,23 +29,74 @@
                 <circle cx="70" transform="translate(5, -10)" cy="25" r="10" fill="none" stroke="lightgray" stroke-width="5" />
                 <rect x="25" transform="translate(25, -10)" y="25" width="50" height="20" rx="4" ry="4" stroke="lightgray" fill="aliceblue" stroke-width="5" /> 
             </svg>
-            <h1>Upload Business Registration File</h1>
-            <p>Please upload you business registration document</p>
-            <p>(PDF, JPG, or PNG)</p>
+            <h1 class="sm:text-2xl text-center font-bold">Upload Business Registration</h1>
+            <div>
+                <p class="text-sm sm:text-lg text-center">Please upload you business registration document</p>
+                <p class="text-sm sm:text-lg text-center">(PDF, JPG, or PNG)</p>
+            </div>
 
-            <label class="border-2 h-40 border-dashed border-gray-400 rounded" for="business_registration_file_input">
-                <svg width="200" height="120" viewBox="0 0 200 120">
-                    <path d="
-                    M 50 80
-                    C 30 80, 30 50, 60 50
-                    C 70 20, 110 20, 120 50
-                    C 150 50, 150 80, 120 80
-                    Z
-                  " fill="lightgray" />
-                </svg>
-            </label>
+            <div id="fileContainer" class="w-full relative border-2 flex justify-center h-40 border-dashed border-gray-400 rounded">
+                <img id="preview" class="hidden" alt="">
+                <div id="label" class="w-full absolute top-0 bottom-0 max-h-40 backdrop-blur flex justify-center gap-1.5 p-2.5 flex-col items-center">
+                    <svg width="200" height="120" viewBox="0 0 200 120">
+                        <path d="M100 20 C60 20 60 20 60 60 C10 60 10 100 60 100
+                                                C70 120 100 120 100 100 C110 120 130 120 140 100
+                                                C160 90 150 70 140 60 C150 40 130 0 100 20" stroke="black" fill="lightgray" />
+                    </svg>
+                    <p class="text-gray-500">Drag & drop or</p>
+                    <label
+                        class="cursor-pointer py-1 w-1/2 text-center border bg-blue-800 text-white font-semibold hover:bg-blue-900 rounded shadow-2xl"
+                        for="business_registration_file_input">Browse file</label>
+                </div>
+            </div>
 
             <input class="hidden" type="file" id="business_registration_file_input">
+
+            <script>
+                const preview = document.getElementById("preview");
+                const business_registration_file_input = document.getElementById("business_registration_file_input");
+                const label = document.getElementById("label");
+
+                business_registration_file_input.addEventListener("change", () => {
+                    const file = business_registration_file_input.files[0];
+
+                    if(file) {
+                        const reader = new FileReader();
+
+                        reader.onload = function(e) {
+                            label.classList.add("opacity-0");
+                            preview.classList.remove("hidden");
+                            ready = true;
+                            preview.src = e.target.result;
+                        }
+
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                const fileContainer = document.getElementById("fileContainer");
+
+                var ready = false;
+
+                fileContainer.addEventListener("mouseenter", () => {
+                    if(label.classList.contains("opacity-0")) {
+                        label.classList.remove("opacity-0");
+                    }
+                });
+
+                fileContainer.addEventListener("mouseleave", () => {
+                    if(ready) {
+                        label.classList.add("opacity-0");
+                    }
+                })
+
+            </script>
+
+            <p class="text-sm">Supported formats:PDF, JPG, PNG</p>
+            <div class="w-full flex gap-2.5">
+                <button class="w-1/2 py-1 bg-gray-200 hover:bg-gray-300 rounded border-gray-300 border-2">Cancel</button>
+                <button class="w-1/2 py-1 bg-blue-800 text-white hover:bg-blue-900 rounded border">Upload</button>
+            </div>
         </div>
     </div>
 

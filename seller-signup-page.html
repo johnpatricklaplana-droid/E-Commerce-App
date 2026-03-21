@@ -6,92 +6,59 @@
     <title>seller signup</title>
 </head>
 <body>
-    <div class="
-        h-screen w-screen bg-blue-950 flex items-center justify-center
-    ">
-        <form action="" class="
-            bg-blue-900 flex flex-col p-3 w-2xl gap-1.5 h-125 overflow-auto
-            [scrollbar-width:none]
-        ">
-            <h1 class="text-white text-center text-lg sm:text-2xl font-bold">Create
-                <span class="text-orange-600 text-lg sm:text-2xl font-bold tracking-wide text-center">
-                    ShopEase
-                </span>
-                account
-            </h1>
-
-            <label class="text-gray-300" for="first_name">First Name</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" id="first_name" type="text" placeholder="First name">
-            <label class="text-gray-300" for="">Last Name</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Last name">
-            <label class="text-gray-300" for="">Street</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Street">
-            <label class="text-gray-300" for="">City</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="City">
-            <label class="text-gray-300" for="">Province</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Province">
-            <label class="text-gray-300" for="">Postal code</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Postal code">
-            <label class="text-gray-300" for="">Country</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Country">
-            <label class="text-gray-300" for="">Email</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Email">
-            <label class="text-gray-300" for="">Password</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="Password">
-            <label class="text-gray-300" for="">National id</label>
-            <input class="border border-gray-300 p-2.5 placeholder:text-gray-300 text-gray-300 outline-0" type="text" placeholder="National id">
-            <select class="bg-gray-400 text-white p-2.5 outline-0" name="" id="">
-                <option value="Savings Accounts">Savings Accounts</option>
-                <option value="Money Market Accounts">Money Market Accounts</option>
-                <option value="Certificates of Deposit">Certificates of Deposit</option>
-                <option value="Fixed Deposit Accounts">Fixed Deposit Accounts</option>
-            </select>
-              
-            <div class="flex justify-around">
-                <label for="imageUpload" class="
-                                border-gray-400 border-dashed cursor-pointer border-2
-                                py-1.5 min-h-72 w-2xs flex justify-center 
-                            ">
-                    <img id="preview" class="hidden w-full h-full object-cover" alt="">
-                
-                    <div id="placeholder" class="flex flex-col justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                            class="w-10 h-10 text-gray-400">
-                
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v14H4z" />
-                
-                            <circle cx="9" cy="9" r="1.5" />
-                
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 17l5-5 4 4 3-3 4 4" />
-                        </svg>
-                        <span class="text-gray-400">Upload image</span>
-                    </div>
-                </label>
-                
-                <input class="hidden" type="file" name="" id="imageUpload">
-                <label for="imageUpload" class="
-                                border-gray-400 border-dashed cursor-pointer border-2
-                                py-1.5 min-h-72 w-2xs flex justify-center 
-                            ">
-                    <img id="preview" class="hidden w-full h-full object-cover" alt="">
-                
-                    <div id="placeholder" class="flex flex-col justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                            class="w-10 h-10 text-gray-400">
-                
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v14H4z" />
-                
-                            <circle cx="9" cy="9" r="1.5" />
-                
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 17l5-5 4 4 3-3 4 4" />
-                        </svg>
-                        <span class="text-gray-400">Upload file</span>
-                    </div>
-                </label>
-                
-                <input class="hidden" type="file" name="" id="imageUpload">
+    <div class="h-screen bg-blue-100 w-screen flex items-center justify-center">
+        <form class="flex w-full sm:bg-white sm:shadow-2xl rounded-2xl sm:w-125 flex-col justify-center gap-2.5 items-center p-6" action="">
+            <h1 class="text-3xl font-bold">Seller Sign Up</h1>
+            <h2 class="text-gray-400">Create your seller account</h2>
+            <hr class="w-full text-gray-400">
+            <div class="flex w-full gap-2.5">
+                <div class="flex w-full flex-col">
+                    <label class="text-sm" for="">First Name</label>
+                    <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Enter your first name">
+                </div>
+                <div class="flex w-full flex-col">
+                    <label class="text-sm" for="">Last Name</label>
+                    <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Enter your last name">
+                </div>
             </div>
-            
+            <hr class="w-full text-gray-400">
+            <div class="flex flex-col w-full">
+                <label class="text-sm" for="">Street Address</label>
+                <input class="border border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Enter your steet address">
+            </div>
+            <hr class="w-full text-gray-400">
+            <div class="flex justify-between items-center gap-2.5 w-full">
+                <div class="w-full">
+                    <label class="text-sm" for="">City</label>
+                    <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Enter your city">
+                </div>
+                <div class="w-full">
+                    <label class="text-sm" for="">Province/State</label>
+                    <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Select province/state">
+                </div>
+                <div class="w-full">
+                    <label class="text-sm" for="">Postal Code</label>
+                    <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="text" placeholder="Enter postal code">
+                </div>
+            </div>
+            <hr class="w-full text-gray-400">
+            <div class="w-full">
+                <label class="text-sm" for="">Country</label>
+                <select class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" name="" id="">
+                    <option value="todo">TODO</option>
+                </select>
+            </div>
+            <hr class="text-gray-400 w-full">
+            <div class="w-full flex flex-col">
+                <label class="text-sm" for="">Email Address</label>
+                <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="email" placeholder="Enter you email address">
+            </div>
+            <hr class="w-full text-gray-400">
+            <div class="w-full flex flex-col">
+                <label class="text-sm" for="">Password</label>
+                <input class="border w-full border-gray-400 rounded p-1.5 outline-0 text-sm" type="password" placeholder="Create a password">
+            </div>
+            <button class="w-full bg-blue-800 text-white py-1.5 rounded font-bold">Sign Up</button>
         </form>
     </div>
 
